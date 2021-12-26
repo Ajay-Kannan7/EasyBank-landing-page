@@ -30,3 +30,10 @@ $().slideDown(1000); //for a sliding up and appearing animation(Parameter is the
 // and many more
 ```
 For more check out the jQuery documentation:-https://api.jquery.com/
+
+## Desktop Design
+![image](https://user-images.githubusercontent.com/78952955/147412372-797543b0-3814-4a24-8080-37c038bf97be.png)
+## Mobile Design
+![image](https://user-images.githubusercontent.com/78952955/147412393-44bc53b6-8d52-4153-9396-579d52021d84.png)
+## Live Site URL
+https://easybank-co-op.netlify.app/
