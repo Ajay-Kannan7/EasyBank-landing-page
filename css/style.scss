@@ -1,0 +1,389 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-family:sans;
+}
+.clearfix::after{
+    content:'';
+    clear:both;
+    display:block;
+}
+@font-face{
+    font-family:sans;
+    src:url('../fonts/PublicSans-Italic-VariableFont_wght.ttf');
+}
+@mixin spacing{
+    display:flex;
+    justify-content:space-between;
+}
+/*Navigation bar design starts here*/
+header{
+    width:100%;
+    padding:10px 75px;
+    nav{
+       width:100%;
+        img,.elements ul{
+            margin-bottom:3%;
+        }
+        img{
+            width:15%;
+            float:left;
+            margin-top:1.8%;
+        }
+        .elements{
+            width:70%;
+            float:right;
+            @include spacing;
+            ul{
+                width:50%;
+                list-style-type:none;
+                @include spacing;
+                padding:2% 0;
+                li a{
+                    text-decoration:none;
+                    font-weight:bolder;
+                    color:#000;
+                }
+            }
+            button{
+                height:10%;
+                color:#fff;
+                margin-top:1.5%;
+                padding:1.5% 1.4%;
+                border-radius:20px;
+                border-style:none;
+                background-color:#30cb7d;
+                font-weight:bolder;
+                cursor:pointer;
+                transition:opacity 0.3s ease-in;
+            }
+            button:hover{
+                opacity:0.4;
+            }
+        }
+        .close{
+            float:right;
+            display:none;
+            background:none;
+        }
+    }
+}
+/*responsive navigation design starts here*/
+@media only screen and (max-width:960px){
+header{
+        nav{
+            width:100%;
+            padding:2% 1%;
+            img{
+                width:65%;
+            }
+            .elements{
+                width:100%;
+                display:none;
+                clear:both;
+                float:none;
+                margin:0 auto;
+                border-radius:10px;
+                ul{
+                    width:100%;
+                    flex-direction:column;
+                    text-align:center;
+                    margin-top:5%;
+                    li{
+                        margin-bottom:10%;
+                        margin-top:5%;
+                    }
+                }
+                button{
+                    display:none;
+                    background-color:#fff;
+                }
+            }
+            .close{
+                display:block;
+                padding:1%;
+                border-radius:25px;
+                font-size:25px;
+                border-style:none;
+                cursor:pointer;
+            }
+        }
+    }
+}
+/*responsive navigation design ends here*/
+/*Navigation bar design ends here*/
+/*Banner designing starts here*/
+.banner{
+    width:100%;
+    @include spacing;
+    .heading{
+        width:50%;
+        padding:15% 5%;
+        h1, p{
+            margin-bottom:9%;
+        }
+        h1{
+            font-size:55px;
+        }
+        p{
+            font-size:20px;
+        }
+        button{
+            color:#fff;
+            margin-top:1.5%;
+            padding:2% 2%;
+            border-radius:20px;
+            border-style:none;
+            background-color:#30cb7d;
+            font-weight:bolder;
+            font-size:20px;
+            cursor:pointer;
+            transition:opacity 0.3s ease-in;
+        }
+        button:hover{
+            opacity:0.4;
+        }
+    }
+    .mockup{
+        width:50%;
+        background-image:url('../images/bg-intro-desktop.svg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        img{
+            width:100%;
+            position:relative;
+            top:20%;
+        }
+    }
+}
+@media only screen and (max-width:960px){
+    .banner{
+        flex-direction:column-reverse;
+        .heading{
+            text-align:center;
+        }
+        .heading,.mockup{
+            width:100%;
+        }
+        .mockup{
+            background-image:url('../images/bg-intro-mobile.svg');
+        }
+    }
+}
+/*Banner designing ends here*/
+/*Body one designing starts here*/
+.body-one{
+    width:100%;
+    background-color:#f4f5f7;
+    padding:7% 0;
+    z-index:-2;
+    .cover{
+        width:75%;
+        text-align:left;
+        margin:0 auto;
+        h1{
+            margin-bottom:4%;
+            font-size:45px;
+            font-weight:bolder;
+        }
+    }
+    .cards{
+        width:100%;
+        padding:5% 0;
+        display:flex;
+        .card{
+            width:20%;
+            margin:0 auto;
+            padding:5% 0;
+            h3{
+                font-size:28px;
+            }
+            img,h3{
+                margin-bottom:10%;
+            }
+        }
+    }
+}
+@media only screen and (max-width:960px){
+    .body-one{
+        .cover{
+            text-align:center;
+        }
+        .cards{
+            flex-direction:column;
+            .card{
+                width:90%;
+                text-align:center;
+            }
+        }
+    }
+}
+/*Body one designing ends here*/
+/*Body two designing starts here*/
+.body-two{
+    width:100%;
+    background-color:#f3efef;
+    padding:7% 0;
+    h2{
+        width:75%;
+        margin:0 auto;
+        font-size:44px;
+        margin-bottom:3%;
+    }
+    .articles{
+        width:90%;
+        margin:0 auto;
+        @include spacing;
+        .blog{
+            width:24%;
+            background-color:white;
+            padding-bottom:3%;
+            border-radius:20px;
+            img,.name,a{
+                margin-bottom:7%;
+            }
+            img{
+                width:100%;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px;
+            }
+            .name{
+                font-size:13px;
+                margin-left:4%;
+            }
+            a{
+                text-decoration:none;
+                font-size:25px;
+                display:block;
+                color:#000;
+                transition:color 0.2s ease-in;
+                margin-left:4%;
+            }
+            a:hover{
+                color:#30cb7d;
+            }
+            .desc{
+                margin-left:4%;
+            }
+        }
+    }
+}
+@media only screen and (max-width:960px){
+    .body-two{
+        h2{
+            text-align:center;
+            margin-bottom:7%;
+        }
+        .articles{
+            flex-direction:column;
+            .blog{
+                width:100%;
+                margin-bottom:7%;
+            }
+        }
+    }
+}
+/*Body two designing ends here*/
+/*Footer design starts here*/
+footer{
+    width:100%;
+    background-color:#2d314e;
+    color:#fff;
+    padding:2% 0;
+    display:flex;
+    justify-content:space-between;
+    .socials{
+        width:24%;
+        text-align:center;
+        h2{
+            margin-bottom:15%;
+            font-size:30px;
+        }
+        .media{
+            a{
+                text-decoration:none;
+                color:#fff;
+                letter-spacing:9px;
+                font-size:20px;
+                transition:color 0.3s ease-in;
+            }
+            a:hover{
+                color:#30cb7d;
+            }
+        }
+    }
+    .link1{
+        width:14%;
+        list-style-type:none;
+        li{
+            margin-bottom:7%;
+            a{
+                text-decoration:none;
+                color:#fff;
+                transition:color 0.3s ease-in;
+            }
+            a:hover{
+                color:#30cb7d;
+            }
+        }
+    }
+    .link2{
+        width:14%;
+        list-style-type:none;
+        li{
+            margin-bottom:7%;
+            a{
+                text-decoration:none;
+                color:#fff;
+                transition:color 0.3s ease-in;
+            }
+            a:hover{
+                color:#30cb7d;
+            }
+        }
+    }
+    .copyright{
+        width:28%;
+        button{
+            color:#fff;
+            margin-top:1.5%;
+            padding:2% 2%;
+            border-radius:20px;
+            border-style:none;
+            background-color:#30cb7d;
+            font-weight:bolder;
+            font-size:20px;
+            margin-bottom:5%;
+            cursor:pointer;
+            transition:opacity 0.3s ease-in;
+        }
+        button:hover{
+            opacity:0.4;
+        }
+    }
+}
+@media only screen and (max-width:960px){
+    footer{
+        flex-direction:column;
+        padding:7% 0;
+        .socials{
+            width:100%;
+            h2{
+                margin-bottom:5%;
+                font-size:45px;
+            }
+        }
+        .link1,.link2{
+            li{
+                margin-bottom:3%;
+            }
+        }
+        .link1,.link2,.copyright{
+            width:100%;
+            margin-top:4%;
+            text-align:center;
+        }
+    }
+}
+/*Footer design ends here*/
