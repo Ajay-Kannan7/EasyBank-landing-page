@@ -15,10 +15,10 @@ $(function(){
     $('.close').on({
         click:function(){
             if(!open){
-                $('.elements').slideDown(1000);
+                $('.elements').slideDown(350);
                 open=true;
             }else{
-                $('.elements').slideUp(1000);
+                $('.elements').slideUp(350);
                 open=false;
             }
         }
