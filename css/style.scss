@@ -44,6 +44,10 @@ header{
                     text-decoration:none;
                     font-weight:bolder;
                     color:#000;
+                    transition:opacity 0.3s ease-in;
+                }
+                li a:hover{
+                    opacity:0.4;
                 }
             }
             button{

@@ -48,6 +48,10 @@ header nav .elements ul li a {
   text-decoration: none;
   font-weight: bolder;
   color: #000;
+  transition: opacity 0.3s ease-in;
+}
+header nav .elements ul li a:hover {
+  opacity: 0.4;
 }
 header nav .elements button {
   height: 10%;
